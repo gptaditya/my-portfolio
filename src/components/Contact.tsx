@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Globe } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -72,7 +72,22 @@ export default function Contact() {
                             >
                                 <Github size={18} className="sm:w-5 sm:h-5" />
                             </a>
-                            {/* Add LinkedIn if available */}
+                            <a
+                                href={portfolioData.personal.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                            >
+                                <Linkedin size={18} className="sm:w-5 sm:h-5" />
+                            </a>
+                            <a
+                                href={portfolioData.personal.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center hover:bg-purple-700 transition-colors"
+                            >
+                                <Globe size={18} className="sm:w-5 sm:h-5" />
+                            </a>
                         </div>
                     </motion.div>
 

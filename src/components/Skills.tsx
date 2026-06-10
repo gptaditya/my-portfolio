@@ -26,6 +26,14 @@ export const skillIcon = {
     Hibernate: { href: 'https://hibernate.org/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-original.svg' },
     SpringMVC: { href: 'https://spring.io/projects/spring-framework', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg' },
     SpringBoot: { href: 'https://spring.io/projects/spring-boot', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original-wordmark.svg' },
+    PostgreSQL: { href: 'https://www.postgresql.org/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg' },
+    Git: { href: 'https://git-scm.com/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg' },
+    AWS: { href: 'https://aws.amazon.com/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', bg: 'bg-white' },
+    JWT: { href: 'https://jwt.io/', src: 'https://cdn.simpleicons.org/jsonwebtokens/white' },
+    Vercel: { href: 'https://vercel.com/', src: 'https://cdn.simpleicons.org/vercel/white' },
+    Jest: { href: 'https://jestjs.io/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg' },
+    Cypress: { href: 'https://www.cypress.io/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg' },
+    Storybook: { href: 'https://storybook.js.org/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/storybook/storybook-original.svg' },
 };
 
 interface Skill {
@@ -88,7 +96,7 @@ export default function Skills() {
                                         variants={item}
                                         className="rounded-lg cursor-default flex flex-col items-center p-2"
                                     >
-                                        <div className="bg-black rounded-full p-1.5 sm:p-2 border border-gray-200">
+                                        <div className={`${('bg' in skillData && skillData.bg) || 'bg-black'} rounded-full p-1.5 sm:p-2 border border-gray-200`}>
                                             <a href={skillData.href} target='_blank' rel='noreferrer'>
                                                 <img
                                                     src={skillData.src}
